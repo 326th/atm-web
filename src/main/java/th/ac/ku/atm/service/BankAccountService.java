@@ -30,11 +30,11 @@ public class BankAccountService {
         return Arrays.asList(accounts);
     }
 
-//    public void createBankAccount(BankAccount bankAccount){
-//        bankAccountsList.add(bankAccount);
-//    }
-//
-//    public List<BankAccount> getBankAccounts() {
-//        return new ArrayList<>(this.bankAccountsList);
-//    }
+    public void createBankAccount(BankAccount bankAccount){
+        bankAccountsList.add(bankAccount);
+    }
+
+    public List<BankAccount> getBankAccounts() {
+        return new ArrayList<>(this.bankAccountsList);
+    }
 }
