@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+      xmlns:th="https://www.thymeleaf.org">
+
+<div class="container" layout:fragment="content">
+    <h1>Edit Bank Account</h1>
+    <form th:action="@{/bankaccount/deposit/{id}(id=${bankAccount.id})}" method="POST">
+
+        <div class="form-group">
+            <label for="inputId">ID</label>
+            <input disabled type="text" class="form-control" th:value ="${bankAccount.id}" name="id" id="inputId">
+        </div>
+        <div class="form-group">
+            <label for="inputCustomerId">Customer ID</label>
+            <input disabled type="text" class="form-control" th:value ="${bankAccount.customerId}" name="customerId" id="inputCustomerId">
+        </div>
+        <div class="form-group">
+            <label for="inputType">Type</label>
+            <input disabled type="text" class="form-control" th:value ="${bankAccount.type}" name="type" id="inputType">
+        </div>
+
+        <div class="form-group">
+            <label>Current Money : </label>
+            <label th:text = "${bankAccount.balance}"></label><br>
+            <label for="inputBalance">Amount deposit</label>
+            <input type="text" class="form-control" name="balance" th:value ="0" id="inputBalance">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary">
+        </div>
+
+    </form>
+</div>
